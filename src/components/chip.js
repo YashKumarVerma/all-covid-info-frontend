@@ -1,9 +1,8 @@
 import React, { useState } from "react"
-import { AddFilter, RemoveFilter, filters } from "../storage/filters"
 import Chip from "@material-ui/core/Chip"
 import DoneIcon from "@material-ui/icons/Done"
 
-export const FunctionalChip = ({ title }) => {
+export const FunctionalChip = ({ title, addFilter, removeFilter }) => {
   const [active, setActive] = useState(false)
   return (
     <Chip
@@ -13,13 +12,12 @@ export const FunctionalChip = ({ title }) => {
       color={active === true ? "secondary" : "primary"}
       onClick={() => {
         if (active) {
-          RemoveFilter(title)
+          removeFilter(title)
           setActive(false)
         } else {
-          AddFilter(title)
+          addFilter(title)
           setActive(true)
         }
-        console.log(filters)
       }}
       deleteIcon={<DoneIcon />}
     />

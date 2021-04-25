@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { FunctionalChip } from "../components/chip"
-import { loadFilterTags } from "../scripts/loadData"
+import { loadFilterTags, loadResourceDataset } from "../scripts/loadData"
 import CircularProgress from "@material-ui/core/CircularProgress"
 
 /** main index page */
@@ -13,7 +13,13 @@ class IndexPage extends React.Component {
       tags: [],
       resource: [],
       loading: false,
+      filters: [],
+      totalResources: -1,
+      processedResources: -1,
     }
+
+    this.addFilter = this.addFilter.bind(this)
+    this.removeFilter = this.removeFilter.bind(this)
   }
 
   /** load tag list and make request for entire site data if not already downloaded */
@@ -21,6 +27,35 @@ class IndexPage extends React.Component {
     loadFilterTags().then(tags => {
       this.setState({ tags })
     })
+
+    loadResourceDataset().then(resource => {
+      this.setState({
+        resource,
+        totalResources: resource.length,
+        processedResources: 0,
+      })
+    })
+  }
+
+  /**
+   * handlers for filters
+   *
+   * any change in filters causes the resource listing to re-render.
+   * The filters are programmed to run over an AND operation.
+   *
+   * For example, selecting a "Doctor" and "Free" would render results
+   * which have both the tags, i.e. Doctor and Free
+   * */
+  /** to add a new filter to resources */
+  addFilter(filter) {
+    if (!this.state.filters.includes(filter)) {
+      this.setState({ filters: [...this.state.filters, filter] })
+    }
+  }
+
+  /** to remove an existing filter from resource */
+  removeFilter(filter) {
+    this.setState({ filters: this.state.filters.filter(val => val !== filter) })
   }
 
   /** throw up on user */
@@ -28,6 +63,7 @@ class IndexPage extends React.Component {
     const { tags } = this.state
     return (
       <Layout>
+        {/** show tags to filter data */}
         <div
           style={{
             display: "flex",
@@ -37,10 +73,16 @@ class IndexPage extends React.Component {
           }}
         >
           {tags.map(tag => (
-            <FunctionalChip key={tag} title={tag} />
+            <FunctionalChip
+              key={tag}
+              title={tag}
+              addFilter={this.addFilter}
+              removeFilter={this.removeFilter}
+            />
           ))}
         </div>
 
+        {/** spinner to show data loading */}
         <div
           style={{
             margin: 20,

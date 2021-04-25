@@ -1,13 +1,13 @@
 import axios from "axios"
-import { AddFilter } from "../storage/filters"
 import { server } from "./server"
 
 /** to load all data about all resources */
-export const loadResourceDataset = async () => {
-  const response = await axios.get(`${server.url}/resource`)
-  const data = await response.data
-  console.log(response)
-}
+export const loadResourceDataset = () =>
+  new Promise(async resolve => {
+    const response = await axios.get(`${server.url}/resource`)
+    const data = await response.data
+    resolve(data.payload)
+  })
 
 /**
  * to load just name of filters
