@@ -11,7 +11,7 @@ const AddFilter = filter => {
 }
 
 const RemoveFilter = filter => {
-  filters = filters.filter(val => val != filter)
+  filters = filters.filter(val => val !== filter)
 }
 
 export { filters, AddFilter, RemoveFilter }
