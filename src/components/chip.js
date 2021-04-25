@@ -10,7 +10,7 @@ export const FunctionalChip = ({ title }) => {
       label={title}
       clickable
       style={{ margin: 2 }}
-      color={active === true ? "primary" : "gray"}
+      color={active === true ? "secondary" : "primary"}
       onClick={() => {
         if (active) {
           RemoveFilter(title)
