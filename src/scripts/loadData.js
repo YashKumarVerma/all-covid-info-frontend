@@ -4,7 +4,7 @@ import { server } from "./server"
 
 /** to load all data about all resources */
 export const loadResourceDataset = async () => {
-  const response = await axios.get(`${server.url}/resources`)
+  const response = await axios.get(`${server.url}/resource`)
   const data = await response.data
   console.log(response)
 }
@@ -16,10 +16,9 @@ export const loadResourceDataset = async () => {
  * if processing of large chunks of data relied on client side
  *
  **/
-export const loadFilterTags = async () => {
-  const response = await axios.get(`${server.url}/resources/tags`)
-  const data = await response.data
-  data.payload.forEach(tag => {
-    AddFilter(tag)
+export const loadFilterTags = () =>
+  new Promise(async resolve => {
+    const response = await axios.get(`${server.url}/resource/tags`)
+    const data = await response.data
+    resolve(data.payload)
   })
-}
