@@ -25,8 +25,8 @@ export const MasonryGrid = ({ children }) => {
   const theme = useTheme()
 
   const breakpointCols = {
-    default: 4,
-    [theme.breakpoints.values.xl]: 4,
+    default: 3,
+    [theme.breakpoints.values.xl]: 3,
     [theme.breakpoints.values.lg]: 3,
     [theme.breakpoints.values.md]: 2,
     [theme.breakpoints.values.sm]: 1,

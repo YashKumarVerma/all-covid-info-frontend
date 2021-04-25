@@ -1,7 +1,6 @@
 import React from "react"
 import clsx from "clsx"
 import Card from "@material-ui/core/Card"
-import { red } from "@material-ui/core/colors"
 import ShareIcon from "@material-ui/icons/Share"
 import Collapse from "@material-ui/core/Collapse"
 import CardMedia from "@material-ui/core/CardMedia"
@@ -9,14 +8,15 @@ import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
 import IconButton from "@material-ui/core/IconButton"
 import CardHeader from "@material-ui/core/CardHeader"
-import FavoriteIcon from "@material-ui/icons/Favorite"
 import CardContent from "@material-ui/core/CardContent"
 import CardActions from "@material-ui/core/CardActions"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import LaunchIcon from "@material-ui/icons/Launch"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 400,
+    marginBottom: 10,
   },
   media: {
     height: 0,
@@ -32,9 +32,6 @@ const useStyles = makeStyles(theme => ({
   expandOpen: {
     transform: "rotate(180deg)",
   },
-  avatar: {
-    backgroundColor: red[500],
-  },
 }))
 
 export const ResourceCard = ({ data }) => {
@@ -46,6 +43,7 @@ export const ResourceCard = ({ data }) => {
     volunteer,
     tags,
     image,
+    reference,
   } = data
   const classes = useStyles()
   const [expanded, setExpanded] = React.useState(false)
@@ -56,20 +54,34 @@ export const ResourceCard = ({ data }) => {
 
   return (
     <Card className={classes.root}>
-      <CardHeader title={title} subheader={timestamp} />
-      <CardMedia className={classes.media} image={image} title={title} />
+      <CardHeader
+        title={title}
+        subheader={timestamp}
+        titleTypographyProps={{ variant: "subtitle1" }}
+        subheaderTypographyProps={{ variant: "subtitle2" }}
+      />
+      {image ? (
+        <CardMedia className={classes.media} image={image} title={title} />
+      ) : (
+        true
+      )}
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           {description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
+        {reference ? (
+          <IconButton aria-label="share">
+            <LaunchIcon />
+          </IconButton>
+        ) : (
+          true
+        )}
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
+
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
