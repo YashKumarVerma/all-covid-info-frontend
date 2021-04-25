@@ -1,6 +1,3 @@
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
@@ -22,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function ButtonAppBar({ siteTitle }) {
+export default function ButtonAppBar() {
   const classes = useStyles()
 
   return (
@@ -38,8 +35,9 @@ export default function ButtonAppBar({ siteTitle }) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            {siteTitle}
+            News
           </Typography>
+          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
