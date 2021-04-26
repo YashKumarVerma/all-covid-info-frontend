@@ -187,6 +187,32 @@ export const ResourceCard = ({ data }) => {
                 )}
               </ButtonGroup>
             </div>
+            <Typography
+              align="left"
+              style={{ marginTop: 10, marginBottom: 10 }}
+            >
+              {/** display original author of this resource */}
+              <div>
+                {credits ? (
+                  <span>
+                    <b>Credits:</b> {credits}
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              {/** display name of volunteer */}
+              <div>
+                {volunteer ? (
+                  <span>
+                    <b>By Volunteer:</b> {volunteer}
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
+            </Typography>
             {image ? (
               <div
                 style={{
