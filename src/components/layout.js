@@ -23,15 +23,6 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        {/** <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with ❤ by
-          {` `}
-          <a href="https://github.com/united-against-corona">our team</a>
-        </footer> */}
       </div>
     </>
   )
