@@ -16,15 +16,17 @@ export const FunctionalChip = ({
       style={{ margin: 2 }}
       color={active === true ? "secondary" : "primary"}
       onClick={() => {
-        if (readOnly) {
+        if (readOnly === true) {
           return
         }
         if (active) {
           removeFilter(title)
           setActive(false)
+          console.log("setting to inactive")
         } else {
           addFilter(title)
           setActive(true)
+          console.log("setting to active")
         }
       }}
       deleteIcon={<DoneIcon />}

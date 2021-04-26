@@ -18,6 +18,7 @@ class IndexPage extends React.Component {
       filters: [],
       totalResources: -1,
       processedResources: -1,
+      animate: false,
     }
 
     this.addFilter = this.addFilter.bind(this)
@@ -51,13 +52,20 @@ class IndexPage extends React.Component {
   /** to add a new filter to resources */
   addFilter(filter) {
     if (!this.state.filters.includes(filter)) {
-      this.setState({ filters: [...this.state.filters, filter] })
+      this.setState({ filters: [...this.state.filters, filter] }, () => {
+        console.log("adding new filter", this.state.filters)
+      })
     }
   }
 
   /** to remove an existing filter from resource */
   removeFilter(filter) {
-    this.setState({ filters: this.state.filters.filter(val => val !== filter) })
+    this.setState(
+      { filters: this.state.filters.filter(val => val !== filter) },
+      () => {
+        console.log("removing filter", this.state.filters)
+      }
+    )
   }
 
   /** throw up on user */
@@ -80,6 +88,7 @@ class IndexPage extends React.Component {
               title={tag}
               addFilter={this.addFilter}
               removeFilter={this.removeFilter}
+              readOnly={false}
             />
           ))}
         </div>
@@ -104,9 +113,11 @@ class IndexPage extends React.Component {
 
         {/** display filtered items */}
         <MasonryGrid>
-          {this.state.resource.map(resource => (
-            <ResourceCard data={resource} />
-          ))}
+          {this.state.resource.map(resource => {
+            if (this.state.filters.every(x => resource.tags.includes(x))) {
+              return <ResourceCard data={resource} />
+            }
+          })}
         </MasonryGrid>
       </Layout>
     )
