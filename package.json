@@ -19,6 +19,7 @@
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "material-ui-icons": "^1.0.0-beta.36",
+    "material-ui-image": "^3.3.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
