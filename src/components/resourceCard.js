@@ -20,7 +20,7 @@ import ButtonGroup from "@material-ui/core/ButtonGroup"
 import CloseIcon from "@material-ui/icons/Close"
 import LaunchIcon from "@material-ui/icons/Launch"
 import ShareIcon from "@material-ui/icons/Share"
-import { dateToHumanFormat } from "../util/dateParser"
+import { dateToHumanFormat, toPreciseDateFormat } from "../util/dateParser"
 import Chip from "@material-ui/core/Chip"
 import Link from "@material-ui/core/Link"
 import Tooltip from "@material-ui/core/Tooltip"
@@ -207,6 +207,17 @@ export const ResourceCard = ({ data }) => {
                 {volunteer ? (
                   <span>
                     <b>By Volunteer:</b> {volunteer}
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              {/** timestamp when added */}
+              <div>
+                {timestamp ? (
+                  <span>
+                    <b>Added at:</b> {toPreciseDateFormat(timestamp)}
                   </span>
                 ) : (
                   ""
