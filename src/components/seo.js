@@ -49,7 +49,8 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
         },
         {
           name: "keywords",
-          content: site.siteMetadata.keywords.join(","),
+          content:
+            "all, covid, resources, india, collection, list, compilation, yash",
         },
         {
           property: `og:title`,
