@@ -5919,7 +5919,7 @@ gatsby-plugin-image@^1.2.1:
     objectFitPolyfill "^2.3.0"
     prop-types "^15.7.2"
 
-gatsby-plugin-manifest@^3.2.0:
+gatsby-plugin-manifest@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.3.0.tgz#211b7ad6b0ff8dccd182a34bdb21a31c1fbd9377"
   integrity sha512-i6xbyjizf4eGDFan1tqPBgXlfOQXTNJFi/LZwEj7Uw0YIDkKWpO9Ic8eqxjgqjxN5PfZ5BVSVY//k5VHT99M6Q==
@@ -5930,7 +5930,7 @@ gatsby-plugin-manifest@^3.2.0:
     semver "^7.3.2"
     sharp "^0.28.0"
 
-gatsby-plugin-offline@^4.2.0:
+gatsby-plugin-offline@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-4.3.0.tgz#2b7420ff649f74f61e5ea2a6c29155df032647ef"
   integrity sha512-rrzCvGXzquBjkzxdCmRWLhC/QW7lX0PKv2Se9cznkavTGNRe0kHpHKeSMPYitEFCOk0y+zu4mvFoZR7ZfPHwDw==
