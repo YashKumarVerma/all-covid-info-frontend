@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "All COVID Info",
     titleTemplate: "%s · All COVID Info",
-    description: `A consolidation of all resources to battle COVID-19, collected from various sources and presented in a user friendly.`,
+    description: `A consolidation of all resources to battle COVID-19, collected from various sources and presented in a user friendly interface.`,
     url: "https://all-covid-info.me", // No trailing slash allowed!
     image: "/images/all-covid-info.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@yashkumarverma",
@@ -17,6 +17,24 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-XQ38QDGX28", // Google Analytics / GA
+        ],
+        gtagConfig: {
+          optimize_id: "OPT_CONTAINER_ID",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: [],
+        },
       },
     },
     `gatsby-transformer-sharp`,
