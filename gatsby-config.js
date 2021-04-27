@@ -23,7 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "G-XQ38QDGX28", // Google Analytics / GA
+          "G-35NGQJ7KVP", // Google Analytics / GA
         ],
         gtagConfig: {
           optimize_id: "OPT_CONTAINER_ID",
@@ -31,8 +31,7 @@ module.exports = {
           cookie_expires: 0,
         },
         pluginConfig: {
-          head: false,
-          respectDNT: true,
+          head: true,
           exclude: [],
         },
       },
