@@ -1,3 +1,3 @@
 export const server = {
-  url: "https://covid.uniauth.co",
+  url: "https://data.all-covid-info.me",
 }
