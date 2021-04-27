@@ -10,6 +10,7 @@ import { Link } from "gatsby"
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    minWidth: 200,
   },
   menuButton: {
     marginRight: theme.spacing(2),

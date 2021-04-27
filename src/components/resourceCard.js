@@ -28,6 +28,7 @@ import Tooltip from "@material-ui/core/Tooltip"
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 400,
+    minWidth: 200,
     marginBottom: 10,
   },
   media: {
