@@ -154,6 +154,12 @@ export const ResourceCard = ({ data }) => {
                   label={tag}
                   style={{ padding: 4, margin: 6 }}
                   readOnly={true}
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
+                  variant="body2"
+                  color="textSecondary"
+                  component="p"
                 />
               ))}
             </div>

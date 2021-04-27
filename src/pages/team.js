@@ -68,17 +68,20 @@ export default function MediaCard() {
               justifyContent: "space-between",
             }}
           >
-            <Link href="https://github.com/yashkumarverma">
+            <Link href="https://github.com/yashkumarverma" target="_BLANK">
               <Button size="small" color="primary">
                 <GitHubIcon />
               </Button>
             </Link>
-            <Link href="https://yashkumarverma.github.io/">
+            <Link href="https://yashkumarverma.github.io/" target="_BLANK">
               <Button size="small" color="primary">
                 <LanguageIcon />
               </Button>
             </Link>
-            <Link href="https://www.linkedin.com/in/yash-kumar-verma/">
+            <Link
+              href="https://www.linkedin.com/in/yash-kumar-verma/"
+              target="_BLANK"
+            >
               <Button size="small" color="primary">
                 <LinkedInIcon />
               </Button>
@@ -121,12 +124,15 @@ export default function MediaCard() {
               justifyContent: "space-between",
             }}
           >
-            <Link href="tel:+918864813176">
+            <Link href="tel:+918864813176" style={{ textDecoration: "none" }}>
               <Button size="small" color="primary">
                 <CallIcon /> Call
               </Button>
             </Link>
-            <Link href="mailto:yk.verma2000@gmail.com">
+            <Link
+              href="mailto:yk.verma2000@gmail.com"
+              style={{ textDecoration: "none" }}
+            >
               <Button size="small" color="primary">
                 <MailOutlineIcon /> Write to me
               </Button>

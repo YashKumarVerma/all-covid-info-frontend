@@ -17,7 +17,7 @@ import "./layout.css"
 const Layout = ({ children }) => {
   return (
     <>
-      <Header siteTitle="COVID Resource Center" />
+      <Header siteTitle="All Covid Info" />
       <div
         style={{
           margin: `0 auto`,

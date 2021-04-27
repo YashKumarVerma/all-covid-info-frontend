@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `COVID-19 Resource Hub`,
-    description: `A consolidation of all resources to battle COVID-19, collected from various sources.`,
+    title: `All Covid Info`,
+    description: `A consolidation of all resources to battle COVID-19, collected from various sources and presented in a user friendly manner.`,
     author: `@yashkumarverma`,
   },
   plugins: [
