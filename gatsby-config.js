@@ -25,7 +25,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `All-Covid-Info.me`,
-        short_name: `all-covid-info`,
+        short_name: `All-COVID-Info.me`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
