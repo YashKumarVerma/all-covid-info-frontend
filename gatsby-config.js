@@ -1,8 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `All Covid Info`,
-    description: `A consolidation of all resources to battle COVID-19, collected from various sources and presented in a user friendly manner.`,
-    author: `@yashkumarverma`,
+    title: "All COVID Info",
+    titleTemplate: "%s · All COVID Info",
+    description: `A consolidation of all resources to battle COVID-19, collected from various sources and presented in a user friendly.`,
+    url: "https://all-covid-info.me", // No trailing slash allowed!
+    image: "/images/all-covid-info.png", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@yashkumarverma",
+    author: "Yash Kumar Verma <yk.verma2000@gmail.com>",
+    siteUrl: "https://all-covid-info.me",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

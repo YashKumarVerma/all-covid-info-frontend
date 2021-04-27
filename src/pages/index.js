@@ -16,12 +16,15 @@ import GroupOutlinedIcon from "@material-ui/icons/GroupOutlined"
 import PlaylistAddCheckIcon from "@material-ui/icons/PlaylistAddCheck"
 import StarBorderIcon from "@material-ui/icons/StarBorder"
 import Tooltip from "@material-ui/core/Tooltip"
+import SEO from "../components/seo"
 
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO title="Listing of all COVID related information " />
       <Container style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 10 }}>
         <Card>
           <CardContent>

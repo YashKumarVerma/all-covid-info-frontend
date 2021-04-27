@@ -140,6 +140,17 @@ export default function MediaCard() {
           </CardActions>
         </Card>
       </div>
+      <div
+        style={{
+          marginTop: 30,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        F
+      </div>
     </Layout>
   )
 }
