@@ -1,0 +1,61 @@
+[
+  {
+    "description": "Allows matching patients with donors. Before you register, please consult your doctor if this is required. Only patients with a case sheet from the doctor on duty will be matched.",
+    "image": "https://i.imgur.com/q6h7vXa.png",
+    "reference": "https://www.dhoondh.com/home",
+    "timestamp": 1619345759000,
+    "title": "Dhoond Plasma Donor Matching",
+    "tags": ["Donor Matching Site"],
+    "volunteer": "Yash Kumar Verma"
+  },
+  {
+    "credits": "Dhruv Kumar Verma",
+    "description": "Bank employees can get themselves vaccinated irrespective of their age at this location",
+    "reference": "https://maps.app.goo.gl/A3ErSpohuVqeVUWi6",
+    "timestamp": 1619369914000,
+    "title": "Vaccination for bankers",
+    "tags": ["Government Resource", "Vaccination"],
+    "volunteer": "Yash Kumar Verma"
+  },
+  {
+    "credits": "Government Of Uttarakhand, NIC",
+    "description": "Official List maintained by Government of Uttarakhand of available hospital beds.",
+    "image": "https://i.imgur.com/Ar3lE7S.png",
+    "reference": "https://covid19.uk.gov.in/bedssummary.aspx",
+    "timestamp": 1619370189000,
+    "title": "Hospital Bed Listings",
+    "tags": ["Government Resource", "Hospital Leads"],
+    "volunteer": "Yash Kumar Verma"
+  },
+  {
+    "description": "Searches and shows latest posts based on location which related to COVID-19. ",
+    "reference": "https://covid19-twitter.in/",
+    "timestamp": 1619370338000,
+    "title": "Twitter Search",
+    "tags": [
+      "Free",
+      "Nutrition and Diet",
+      "Exercies",
+      "Hospital Leads",
+      "Donor Matching Site",
+      "Vaccination"
+    ],
+    "volunteer": "Yash Kumar Verma"
+  },
+  {
+    "description": "Co-WIN is a platform for the citizens of India to Register for COVID-19 vaccination and schedule their vaccination slots at the nearest vaccination centers.",
+    "reference": "https://www.cowin.gov.in/home",
+    "timestamp": 1619522754000,
+    "title": "Co-WIN(Vaccine Registration)",
+    "tags": ["Government Resource", "Vaccination"],
+    "volunteer": "Rishabh Keshan"
+  },
+  {
+    "description": "A compilation of important steps and dietary measures that needs to be taken for recovering from the virus.",
+    "reference": "https://www.instagram.com/p/COIXw_2L6y1/",
+    "timestamp": 1619523263000,
+    "title": "Covid-19 Recovery(Nutritional Info)",
+    "tags": ["Free", "Nutrition and Diet", "Exercies"],
+    "volunteer": "Rishabh Keshan"
+  }
+]

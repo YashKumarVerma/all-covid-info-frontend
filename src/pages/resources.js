@@ -53,7 +53,7 @@ class IndexPage extends React.Component {
   addFilter(filter) {
     if (!this.state.filters.includes(filter)) {
       this.setState({ filters: [...this.state.filters, filter] }, () => {
-        console.log("adding new filter", this.state.filters)
+        // console.log("adding new filter", this.state.filters)
       })
     }
   }
@@ -63,7 +63,7 @@ class IndexPage extends React.Component {
     this.setState(
       { filters: this.state.filters.filter(val => val !== filter) },
       () => {
-        console.log("removing filter", this.state.filters)
+        // console.log("removing filter", this.state.filters)
       }
     )
   }

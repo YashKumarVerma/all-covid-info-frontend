@@ -1,12 +1,15 @@
-import axios from "axios"
-import { server } from "./server"
+// import axios from "axios"
+// import { server } from "./server"
+import rawData from "../storage/raw.json"
+import tags from "../storage/tag.json"
 
 /** to load all data about all resources */
 export const loadResourceDataset = () =>
   new Promise(async resolve => {
-    const response = await axios.get(`${server.url}/resource`)
-    const data = await response.data
-    resolve(data.payload)
+    // const response = await axios.get(`${server.url}/resource`)
+    // const data = await response.data
+    const data = rawData
+    resolve(data)
   })
 
 /**
@@ -18,7 +21,7 @@ export const loadResourceDataset = () =>
  **/
 export const loadFilterTags = () =>
   new Promise(async resolve => {
-    const response = await axios.get(`${server.url}/resource/tags`)
-    const data = await response.data
-    resolve(data.payload)
+    // const response = await axios.get(`${server.url}/resource/tags`)
+    const data = tags
+    resolve(data)
   })

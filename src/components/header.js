@@ -28,12 +28,7 @@ export default function ButtonAppBar({ siteTitle }) {
       <AppBar position="static">
         <Link to="/" style={{ textDecoration: "none", color: "white" }}>
           <Toolbar>
-            <IconButton
-              edge="start"
-              color="inherit"
-              onClick={() => console.log("take to home")}
-              aria-label="close"
-            >
+            <IconButton edge="start" color="inherit" aria-label="close">
               <HomeIcon />
             </IconButton>
 

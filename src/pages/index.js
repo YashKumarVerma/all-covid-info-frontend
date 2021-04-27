@@ -6,12 +6,10 @@ import {
   CardContent,
   CardActions,
   Typography,
-  Divider,
 } from "@material-ui/core"
 import MaterialLink from "@material-ui/core/Link"
 import Button from "@material-ui/core/Button"
 import PostAddIcon from "@material-ui/icons/PostAdd"
-import Fab from "@material-ui/core/Fab"
 import GroupOutlinedIcon from "@material-ui/icons/GroupOutlined"
 import PlaylistAddCheckIcon from "@material-ui/icons/PlaylistAddCheck"
 import StarBorderIcon from "@material-ui/icons/StarBorder"
@@ -19,7 +17,6 @@ import Tooltip from "@material-ui/core/Tooltip"
 import SEO from "../components/seo"
 
 import { Link } from "gatsby"
-import { Helmet } from "react-helmet"
 
 const IndexPage = () => {
   return (

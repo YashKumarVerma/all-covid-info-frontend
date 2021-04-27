@@ -22,11 +22,11 @@ export const FunctionalChip = ({
         if (active) {
           removeFilter(title)
           setActive(false)
-          console.log("setting to inactive")
+          //   console.log("setting to inactive")
         } else {
           addFilter(title)
           setActive(true)
-          console.log("setting to active")
+          //   console.log("setting to active")
         }
       }}
       deleteIcon={<DoneIcon />}
