@@ -98,6 +98,13 @@ const IndexPage = () => {
               site. If you wish to help in the same, drop me an email or call me
               using the links given below.
             </Typography>
+            <br />
+            <Typography variant="body2" color="textSecondary" component="p">
+              <b>Disclaimer : </b> The data available on this site has been
+              contributed by volunteers. For most authentic / latest
+              information, users are requested to contact / verify from the
+              concerned / official sources.
+            </Typography>
           </CardContent>
           <CardActions
             style={{

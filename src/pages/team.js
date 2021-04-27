@@ -144,12 +144,12 @@ export default function MediaCard() {
         style={{
           marginTop: 30,
           display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           flexDirection: "column",
         }}
       >
-        F
+        <ul>
+          <li>Thanks to : Utsav Deep for registering the domain name.</li>
+        </ul>
       </div>
     </Layout>
   )
