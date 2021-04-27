@@ -77,9 +77,9 @@ class IndexPage extends React.Component {
         <div
           style={{
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
             margin: 10,
+            width: "100%",
+            overflowY: "scroll",
           }}
         >
           {tags.map(tag => (
