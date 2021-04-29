@@ -2,6 +2,7 @@
 // import { server } from "./server"
 import rawData from "../storage/raw.json"
 import tags from "../storage/tag.json"
+import states from "../storage/states.json"
 
 /** to load all data about all resources */
 export const loadResourceDataset = () =>
@@ -23,5 +24,11 @@ export const loadFilterTags = () =>
   new Promise(async resolve => {
     // const response = await axios.get(`${server.url}/resource/tags`)
     const data = tags
+    resolve(data)
+  })
+
+export const loadStateNames = () =>
+  new Promise(async resolve => {
+    const data = states
     resolve(data)
   })

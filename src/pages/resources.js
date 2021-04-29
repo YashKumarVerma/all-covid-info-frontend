@@ -1,8 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
+import ControlledOpenSelect from "../components/dropdown"
 import { FunctionalChip } from "../components/chip"
-import { loadFilterTags, loadResourceDataset } from "../scripts/loadData"
+import {
+  loadFilterTags,
+  loadResourceDataset,
+  loadStateNames,
+} from "../scripts/loadData"
 import CircularProgress from "@material-ui/core/CircularProgress"
+import MenuItem from "@material-ui/core/MenuItem"
 import { ResourceCard } from "../components/resourceCard"
 import { MasonryGrid } from "../components/masonry"
 
@@ -14,6 +20,7 @@ class IndexPage extends React.Component {
     this.state = {
       tags: [],
       resource: [],
+      state: [],
       loading: false,
       filters: [],
       totalResources: -1,
@@ -38,6 +45,10 @@ class IndexPage extends React.Component {
         processedResources: 0,
       })
     })
+
+    loadStateNames().then(state => {
+      this.setState({ state })
+    })
   }
 
   /**
@@ -53,7 +64,7 @@ class IndexPage extends React.Component {
   addFilter(filter) {
     if (!this.state.filters.includes(filter)) {
       this.setState({ filters: [...this.state.filters, filter] }, () => {
-        // console.log("adding new filter", this.state.filters)
+        console.log("adding new filter", filter)
       })
     }
   }
@@ -63,16 +74,26 @@ class IndexPage extends React.Component {
     this.setState(
       { filters: this.state.filters.filter(val => val !== filter) },
       () => {
-        // console.log("removing filter", this.state.filters)
+        console.log("removing filter" + filter, this.state.filters)
       }
     )
   }
 
   /** throw up on user */
   render() {
-    const { tags } = this.state
+    const { tags, state } = this.state
+    console.log(this.state.filters)
     return (
       <Layout>
+        <ControlledOpenSelect
+          addFilter={this.addFilter}
+          removeFilter={this.removeFilter}
+          menuItem={state.map(state => (
+            <MenuItem key={state.code} value={state.name}>
+              {state.name}
+            </MenuItem>
+          ))}
+        />
         {/** show tags to filter data */}
         <div
           style={{
