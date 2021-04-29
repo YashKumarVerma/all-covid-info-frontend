@@ -20,14 +20,15 @@ const useStyles = makeStyles(theme => ({
 
 export default function ControlledOpenSelect(props) {
   const classes = useStyles()
-  const [state, setState] = React.useState("")
+  const [state, setState] = React.useState("All states")
   const [open, setOpen] = React.useState(false)
 
   const handleChange = event => {
-    if (state !== event.target.value && event.target.value !== "All states") {
+    if (event.target.value !== "All states") {
+      console.log(state)
       props.removeFilter(state)
-      props.addFilter(event.target.value)
       setState(event.target.value)
+      props.addFilter(event.target.value)
     } else if (event.target.value === "All states") {
       props.removeFilter(state)
       setState("All states")
