@@ -24,8 +24,14 @@ export default function ControlledOpenSelect(props) {
   const [open, setOpen] = React.useState(false)
 
   const handleChange = event => {
-    setState(event.target.value)
-    if (event.target.value !== "All states") props.addFilter(event.target.value)
+    if (state !== event.target.value && event.target.value !== "All states") {
+      props.removeFilter(state)
+      props.addFilter(event.target.value)
+      setState(event.target.value)
+    } else if (event.target.value === "All states") {
+      props.removeFilter(state)
+      setState("All states")
+    }
   }
 
   const handleClose = () => {

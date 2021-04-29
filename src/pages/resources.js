@@ -86,6 +86,7 @@ class IndexPage extends React.Component {
       <Layout>
         <ControlledOpenSelect
           addFilter={this.addFilter}
+          removeFilter={this.removeFilter}
           menuItem={state.map(state => (
             <MenuItem key={state.code} value={state.name}>
               {state.name}
